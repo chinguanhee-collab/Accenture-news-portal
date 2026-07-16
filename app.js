@@ -54,15 +54,20 @@ function setupCategoryFilters() {
     
     navLinks.forEach(link => {
         link.onclick = () => {
-            const selectedCategory = link.innerText.trim();
+            const selectedCategory = link.innerText.trim().toLowerCase();
             
-            // Filter the saved data for articles that match the clicked category
-            const filteredArticles = allNewsData.filter(article => 
-                article.category.toLowerCase() === selectedCategory.toLowerCase()
-            );
-            
-            // Redraw the grid with only the matching articles
-            renderGrid(filteredArticles);
+            // If they click "All News", show everything
+            if (selectedCategory === 'all news') {
+                renderGrid(allNewsData);
+            } else {
+                // Otherwise, filter the saved data for articles that match the clicked category
+                const filteredArticles = allNewsData.filter(article => 
+                    article.category.toLowerCase() === selectedCategory
+                );
+                
+                // Redraw the grid with only the matching articles
+                renderGrid(filteredArticles);
+            }
         };
     });
 }
