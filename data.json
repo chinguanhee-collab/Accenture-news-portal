@@ -1,0 +1,50 @@
+[
+  {
+    "title": "New MRT Line Announced to Connect East Coast and Tuas",
+    "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+    "summary": "The LTA has unveiled plans for a revolutionary express line cutting travel time by 40%.",
+    "content": "The Land Transport Authority (LTA) has officially unveiled the blueprint for a new subterranean express line that will span from the East Coast directly to the Tuas industrial estate. Slated for completion by 2035, this ambitious infrastructure project is expected to slash cross-island commute times by up to 40%. The Minister for Transport emphasized that this development will not only alleviate congestion on the existing East-West Line but also support the growing workforce in the Tuas Megaport region.",
+    "date": "July 16, 2026",
+    "category": "Singapore"
+  },
+  {
+    "title": "Tech Giants Expand Singapore Headquarters",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+    "summary": "Several major tech firms announce massive hiring drives in the CBD.",
+    "content": "Singapore's Central Business District is set to see a massive influx of tech talent as three major global technology firms announced simultaneous expansions of their regional headquarters today. The companies cited Singapore's robust intellectual property laws, stable geopolitical climate, and highly skilled local workforce as key drivers for their investment. The expansions are projected to create over 2,500 new high-paying jobs in software engineering, data analytics, and artificial intelligence over the next three years.",
+    "date": "July 15, 2026",
+    "category": "Business"
+  },
+  {
+    "title": "Monsoon Season Brings Record Rainfall",
+    "image": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=800&q=80",
+    "summary": "PUB advises residents in low-lying areas to take precautions as heavy rain continues.",
+    "content": "The National Environment Agency (NEA) has issued warnings for continued torrential downpours across the island as the annual monsoon season intensifies. Several low-lying areas in the central and eastern regions have already reported minor flash floods. PUB, Singapore's national water agency, has deployed mobile flood response teams and is advising residents to avoid heavily flooded pathways. Commuters are advised to expect delays across major expressways during the evening rush hour.",
+    "date": "July 14, 2026",
+    "category": "Weather"
+  },
+  {
+    "title": "Local Startup Achieves Unicorn Status",
+    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+    "summary": "A Singapore-based AI company has just closed a massive Series C funding round.",
+    "content": "In a landmark achievement for the local tech ecosystem, a homegrown artificial intelligence startup has officially reached 'unicorn' status, surpassing a $1 billion valuation. The company, which specializes in predictive logistics and supply chain optimization, successfully closed a $150 million Series C funding round led by top-tier venture capital firms. The founders credit early-stage government grants as a pivotal factor in their rapid, global scaling.",
+    "date": "July 13, 2026",
+    "category": "Business"
+  },
+  {
+    "title": "Global Markets Rally Amid Interest Rate Cuts",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
+    "summary": "Asian indices close at a record high following overnight gains on Wall Street.",
+    "content": "Asian stock markets experienced a significant rally this morning, closing at record highs following a strong overnight performance on Wall Street. The surge was primarily driven by the US Federal Reserve's unexpected decision to cut interest rates by 50 basis points. The Straits Times Index (STI) jumped 1.8%, with local banking and real estate sectors leading the gains. Analysts predict this bullish sentiment will persist through the quarter if global inflation continues to cool.",
+    "date": "July 12, 2026",
+    "category": "World"
+  },
+  {
+    "title": "New Hawker Centre Opens in Tampines",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+    "summary": "Featuring over 50 stalls, the new hub promises affordable meals for residents.",
+    "content": "Food lovers have a new reason to rejoice as the highly anticipated Tampines Green Hawker Centre officially opened its doors to the public this morning. Boasting over 50 stalls, the environmentally sustainable complex features a mix of traditional vendors and young 'hawkerpreneurs' offering fusion cuisine. Designed with high ceilings for better ventilation and an automated tray return system, the hub promises to provide affordable, high-quality meals while keeping the beloved hawker culture alive.",
+    "date": "July 12, 2026",
+    "category": "Singapore"
+  }
+]
