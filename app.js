@@ -76,3 +76,17 @@ function setupCategoryFilters() {
 document.getElementById('close-modal').onclick = () => {
     document.getElementById('article-modal').classList.add('hidden');
 };
+
+// NEW LOGIC: Real-time Search functionality
+document.getElementById('search-bar').addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase().trim();
+    
+    // Filter the saved data for articles containing the search term in their title or summary
+    const searchedArticles = allNewsData.filter(article => 
+        article.title.toLowerCase().includes(searchTerm) || 
+        article.summary.toLowerCase().includes(searchTerm)
+    );
+    
+    // Redraw the grid with only the matching articles
+    renderGrid(searchedArticles);
+});
