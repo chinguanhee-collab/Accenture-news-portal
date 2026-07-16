@@ -21,10 +21,15 @@ function renderGrid(articles) {
     // Loop through the provided articles and create a card for each
     articles.forEach(article => {
         const card = document.createElement('div');
-        card.className = 'bg-white shadow-sm border border-gray-200 hover:shadow-lg transition-shadow duration-200 cursor-pointer flex flex-col h-full';
+        
+        // ADDED ACCESSIBILITY: Added focus rings, tabindex, and ARIA roles
+        card.className = 'bg-white shadow-sm border border-gray-200 hover:shadow-lg transition-shadow duration-200 cursor-pointer flex flex-col h-full focus:outline-none focus:ring-4 focus:ring-red-600';
+        card.setAttribute('tabindex', '0'); // Makes the card reachable via the 'Tab' key
+        card.setAttribute('role', 'button'); // Tells screen readers this acts like a button
+        card.setAttribute('aria-label', `Read article: ${article.title}`);
         
         card.innerHTML = `
-            <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover">
+            <img src="${article.image}" alt="Image for ${article.title}" class="w-full h-48 object-cover">
             <div class="p-4 flex flex-col flex-grow">
                 <span class="text-red-600 text-xs font-bold uppercase mb-2 block">${article.category}</span>
                 <h4 class="text-lg font-bold mb-2 leading-tight">${article.title}</h4>
@@ -33,14 +38,26 @@ function renderGrid(articles) {
             </div>
         `;
         
-        // Modal Pop-Up Logic
-        card.onclick = () => {
+        // Function to open the modal
+        const openModal = () => {
             document.getElementById('modal-image').src = article.image;
             document.getElementById('modal-category').innerText = article.category;
             document.getElementById('modal-title').innerText = article.title;
             document.getElementById('modal-date').innerText = article.date;
             document.getElementById('modal-content').innerText = article.content || article.summary;
             document.getElementById('article-modal').classList.remove('hidden');
+            
+            // ACCESSIBILITY: Automatically shift the user's keyboard focus to the close button
+            document.getElementById('close-modal').focus();
+        };
+        
+        // Trigger modal on mouse click OR 'Enter' key press
+        card.onclick = openModal;
+        card.onkeydown = (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                openModal();
+            }
         };
         
         newsGrid.appendChild(card);
@@ -89,4 +106,11 @@ document.getElementById('search-bar').addEventListener('input', (event) => {
     
     // Redraw the grid with only the matching articles
     renderGrid(searchedArticles);
+});
+
+// ACCESSIBILITY: Close modal on 'Escape' key press
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.getElementById('article-modal').classList.add('hidden');
+    }
 });
